@@ -46,7 +46,7 @@ void DigiPot::increase(uint8_t amount) {
 }
 
 void DigiPot::decrease(uint8_t amount) {
-  amount = constrain(amount, 0, DIGIPOT_MAX_AMOUNT);
+  amount = constrain(amount, 0, DIGIPOT_MIN_AMOUNT);
   change(DIGIPOT_DOWN, amount);
 }
 
