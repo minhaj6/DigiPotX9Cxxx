@@ -7,6 +7,20 @@
 #include "Arduino.h"
 #include "DigiPotX9Cxxx.h"
 
+DigiPot::DigiPot() {}
+
+void DigiPot::setup(uint8_t incPin, uint8_t udPin, uint8_t csPin) {
+  _incPin = incPin;
+  _udPin = udPin;
+  _csPin = csPin;  
+  _currentValue = DIGIPOT_UNKNOWN;
+
+  pinMode(_incPin, OUTPUT);
+  pinMode(_udPin, OUTPUT);
+  pinMode(_csPin, OUTPUT);
+  digitalWrite(_csPin, HIGH);
+}
+
 DigiPot::DigiPot(uint8_t incPin, uint8_t udPin, uint8_t csPin) {
   _incPin = incPin;
   _udPin = udPin;
