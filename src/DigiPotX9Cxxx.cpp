@@ -15,10 +15,11 @@ void DigiPot::setup(uint8_t incPin, uint8_t udPin, uint8_t csPin) {
   _csPin = csPin;  
   _currentValue = DIGIPOT_UNKNOWN;
 
+  digitalWrite(_csPin, HIGH);
   pinMode(_incPin, OUTPUT);
   pinMode(_udPin, OUTPUT);
   pinMode(_csPin, OUTPUT);
-  digitalWrite(_csPin, HIGH);
+  
 }
 
 DigiPot::DigiPot(uint8_t incPin, uint8_t udPin, uint8_t csPin) {
@@ -27,10 +28,10 @@ DigiPot::DigiPot(uint8_t incPin, uint8_t udPin, uint8_t csPin) {
   _csPin = csPin;  
   _currentValue = DIGIPOT_UNKNOWN;
 
+  digitalWrite(_csPin, HIGH);
   pinMode(_incPin, OUTPUT);
   pinMode(_udPin, OUTPUT);
   pinMode(_csPin, OUTPUT);
-  digitalWrite(_csPin, HIGH);
 
 }
 
